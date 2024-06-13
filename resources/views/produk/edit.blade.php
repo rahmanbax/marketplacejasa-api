@@ -13,22 +13,22 @@
         <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8">
             <h1 class="text-3xl font-bold mb-8 text-gray-800">Edit Jasa</h1>
             <form id="jasaForm" data-id="{{ $id }}">
-                <input type="hidden" id="barangId" name="barangId" value="{{ $id }}">
+                
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="judul">Judul</label>
-                    <input type="text" name="judul" id="judul" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" >Judul</label>
+                    <input type="text" id="judul" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" id="deskripsi" rows="4" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" >Deskripsi</label>
+                    <textarea id="deskripsi" rows="4" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="durasi">Durasi</label>
-                    <input type="text" name="durasi" id="durasi" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" >Durasi</label>
+                    <input type="text" id="durasi" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="kategori">Kategori</label>
-                    <input type="text" name="kategori" id="kategori" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" >Kategori</label>
+                    <input type="text" id="kategori" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 </div>
                 <div class="flex place-content-end gap-4">
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out">Simpan</button>
@@ -59,8 +59,8 @@
                     }
                 },
                 error: function(xhr, status, error) {
-                    console.error('Error fetching data:', status, error); // Debugging line
-                    alert('Gagal memuat data. Silakan periksa koneksi internet Anda atau hubungi administrator.');
+                    console.error('Error:', status, error); // Debugging line
+                    alert('Gagal memuat data.');
                 }
             });
 
